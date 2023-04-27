@@ -1,7 +1,8 @@
 name: Make Duolingo words
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '30 5,17 * * *'
 
 env:
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
